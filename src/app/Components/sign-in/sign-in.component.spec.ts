@@ -4,7 +4,7 @@ import { SignInComponent } from './sign-in.component';
 
 describe('SignInComponent', () => {
   let component: SignInComponent;
-  let fixture: ComponentFixture<SignInComponent>;
+  let fixture: ComponentFixture<SignInComponent>; 
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({

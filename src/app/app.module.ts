@@ -18,6 +18,8 @@ import { OurTeamComponent } from './Components/landing-page/our-team/our-team.co
 import { SignInComponent } from './Components/sign-in/sign-in.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { ExploreProductsComponent } from './Components/explore-products/explore-products.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { ExploreProductsComponent } from './Components/explore-products/explore-
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
+    ReactiveFormsModule
     // ProfileModule
   ],
   providers: [],
