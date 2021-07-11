@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-// import { ProfileModule } from './Components/profile/profile.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,14 +34,10 @@ import { ExploreProductsComponent } from './Components/explore-products/explore-
     OurTeamComponent,
     SignInComponent,
     SignUpComponent,
-    ExploreProductsComponent
+    ExploreProductsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    // ProfileModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
