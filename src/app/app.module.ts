@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
-// import { ProfileModule } from './Components/profile/profile.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -40,7 +40,8 @@ import { ExploreProductsComponent } from './Components/explore-products/explore-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // ProfileModule
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
