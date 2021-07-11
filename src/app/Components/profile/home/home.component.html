@@ -1,0 +1,93 @@
+<div class="container my-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="border-bottom text-center pb-4">
+                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="profile"
+                  class="img-lg rounded-circle mb-3" onclick="document.getElementById('fileInput').click();" />
+                <div class="mb-3">
+                  <div class="custom-file mt-3 mb-3">
+                    <input id="fileInput" type="file" class="fileInput" />
+                    <input type="button" class="btn btn-primary btn-block mx-auto w-50 d-flex justify-content-center"
+                      value="UPDATE IMAGE" />
+                  </div>
+                  <h3>User Name</h3>
+                  <div class=" align-items-center justify-content-center">
+                    <h5 class="mb-0 mr-2 text-muted">Title</h5>
+                    <h5 class="mb-0 mr-2 text-black-50"><i class="bi bi-geo-alt mr-1"></i>Location
+                    </h5>
+                  </div>
+                  <div class="text-center mt-4 mt-md-0 w-100 pt-5">
+                    <button class="btn btn-outline-primary w-50 " routerLink='editProfile'>Edit Profile</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="py-4">
+                <p class="clearfix">
+                  <span class="float-left">
+                    Phone
+                  </span>
+                  <span class="float-right text-muted">
+                    006 3435 22
+                  </span>
+                </p>
+                <p class="clearfix">
+                  <span class="float-left">
+                    E-Mail
+                  </span>
+                  <span class="float-right text-muted">
+                    user@testmail.com
+                  </span>
+                </p>
+                <p class="clearfix">
+                  <span class="float-left">
+                    Num. Of Products
+                  </span>
+                  <span class="float-right text-muted">
+                    <a href="#">5</a>
+                  </span>
+                </p>
+              </div>
+              <button class="btn btn-primary btn-block mb-2">Preview</button>
+            </div>
+            <div class="col-lg-8">
+              <!-- nav bar -->
+              <div class="mt-4 py-2 border ">
+                <ul class="nav profile-navbar">
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink='myProducts'>
+                      <i class="bi bi-bag mr-1"></i>
+                      My Product
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink='addNewProduct'>
+                      <i class="bi bi-bag-plus mr-1"></i>
+                      Add Product
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink='notification'>
+                      <i class="bi bi-bell mr-1"></i>
+                      Notification
+                    </a>
+                  </li>
+                  <li class="d-flex justify-content-end ms-auto">
+                    <button class="btn btn-outline-white text-danger w-100" routerLink='/home'>Sign Out</button>
+                  </li>
+                </ul>
+              </div>
+              <div class="Content">
+                <router-outlet></router-outlet>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

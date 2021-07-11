@@ -1,0 +1,35 @@
+#services {
+  width: 100%;
+  background: #fafafa;
+}
+
+.parent-service {
+  padding-left: 60px;
+}
+
+.iconf {
+  color: #121c82;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+#services h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.serDecr {
+  color: #666;
+  margin: 0 0 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.75rem;
+}
+
+.descriptionS:hover {
+  color: #aeaffa;
+}
