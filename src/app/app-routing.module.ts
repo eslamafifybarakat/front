@@ -4,13 +4,15 @@ import { ExploreProductsComponent } from './Components/explore-products/explore-
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
 import { SignInComponent } from './Components/sign-in/sign-in.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
+import { AuthGuard } from './auth.guard';
+
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: LandingPageComponent },
+  { path: '', redirectTo: 'sign-in', pathMatch: 'full' },
+  { path: 'home',canActivate:[AuthGuard], component: LandingPageComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
-  { path: 'explore-products', component: ExploreProductsComponent },
+  { path: 'explore-products',canActivate:[AuthGuard], component: ExploreProductsComponent },
 
   {
     path: 'profile',

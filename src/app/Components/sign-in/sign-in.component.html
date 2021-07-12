@@ -3,7 +3,7 @@
     <div class="row d-flex justify-content-center align-items-center h-100">
 
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 border border rounded p-5">
-        <form>
+        <form  [formGroup]='loginForm'   (ngSubmit)='submitLoginForm(loginForm)' >
           <p class="small fw-bold mt-2 pt-1 mb-0 mb-3 d-flex flex-row align-items-center justify-content-center">Don't
             Have An Account?<a href="#!" class="link-danger ml-2"routerLink='/sign-up'>Sign Up</a>
           </p>
@@ -24,16 +24,34 @@
 
           <!-- Email input -->
           <div class="form-outline mb-4">
+            <div *ngIf='error' class="alert  alert-danger">
+              <p>{{error}}</p>
+          </div>
             <label class="form-label" for="form3Example3">Email address</label>
-            <input type="email" id="form3Example3" class="form-control form-control-lg"
+            <input formControlName='Email' type="email" id="form3Example3" class="form-control form-control-lg"
               placeholder="Enter a valid email address" />
+              <div *ngIf="loginForm.get('Email')?.errors!=null && loginForm.get('Email')?.touched" class="alert alert-danger mt-2">
+                <p *ngIf="loginForm.get('Email')?.errors?.required">email is required</p>
+                <p *ngIf="loginForm.get('Email')?.errors?.email">email not valid</p>
+                
+        
+            </div>
           </div>
 
           <!-- Password input -->
           <div class="form-outline mb-3">
             <label class="form-label" for="form3Example4">Password</label>
-            <input type="password" id="form3Example4" class="form-control form-control-lg"
+            <input formControlName='Password' type="password" id="form3Example4" class="form-control form-control-lg"
               placeholder="Enter password" />
+
+              <div *ngIf="loginForm.get('Password')?.errors!=null && loginForm.get('Password')?.touched" class="alert alert-danger mt-2">
+                <p *ngIf="loginForm.get('Password')?.errors?.required">password is required</p>
+                <p *ngIf="loginForm.get('Password')?.errors?.pattern">password must start with uppercase.... </p>
+               
+        
+            </div>
+
+
           </div>
 
           <div class="d-flex justify-content-between align-items-center">
@@ -48,7 +66,7 @@
           </div>
 
           <div class="text-center text-lg-start mt-4 pt-2 d-flex justify-content-center">
-            <button type="button" class="btn btn-primary btn-lg" routerLink='/explore-products'
+            <button type="submit" class="btn btn-primary btn-lg" 
               style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
           </div>
 
