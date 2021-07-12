@@ -5,80 +5,97 @@
         <div class="card shadow-2-strong card-registration mb-5" style="border-radius: 10px;">
           <div class="card-body p-4 p-md-5">
             <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
-            <form>
+            <form [formGroup]='registerForm'   (ngSubmit)='submitRegisterForm(registerForm)'>
 
               <div class="row">
                 <h5 class="pb-3">Personal Information</h5>
-                <div class="col-md-6 mb-4">
+                <div class="col-md-12 mb-4">
                   <div class="form-outline">
-                    <input type="text" id="firstName" class="form-control form-control-lg" placeholder="First Name" />
+                    <input formControlName='Name' type="text"   id="firstName" class="form-control form-control-lg" placeholder="Full Name" />
+                    <div *ngIf="registerForm.get('Name')?.errors!=null && registerForm.get('Name')?.touched" class="alert alert-danger mt-2">
+                      <p *ngIf="registerForm.get('Name')?.errors?.required">firs_name is required</p>
+                      <p *ngIf="registerForm.get('Name')?.errors?.minlength">firs_name is minLength 3</p>
+                      <p *ngIf="registerForm.get('Name')?.errors?.maxlength">firs_name is maxLength 10 </p>
+                  </div>
                   </div>
 
                 </div>
-                <div class="col-md-6 mb-4">
-
-                  <div class="form-outline">
-                    <input type="text" id="lastName" class="form-control form-control-lg" placeholder="Last Name" />
-                  </div>
-                </div>
+               
               </div>
 
               <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-6 mb-4 pb-2">
                   <div class="form-outline">
-                    <input type="email" id="emailAddress" class="form-control form-control-lg"
+                    <input formControlName="Email" type="email" id="emailAddress" class="form-control form-control-lg"
                       placeholder="Email Address" />
+                      <div *ngIf="registerForm.get('Email')?.errors!=null && registerForm.get('Email')?.touched" class="alert alert-danger mt-2">
+                        <p *ngIf="registerForm.get('Email')?.errors?.required">email is required</p>
+                        <p *ngIf="registerForm.get('Email')?.errors?.email">email not valid</p>
+                        
+                
+                    </div>
                   </div>
                 </div>
 
 
-                <div class=" col-md-6 mb-4 pb-2">
+                <div class=" col-md-12 mb-4 pb-2">
                   <div class="form-outline">
-                    <input type="tel" id="password" class="form-control form-control-lg" placeholder="Password" />
+                    <input formControlName='Password' type="tel" id="password" class="form-control form-control-lg" placeholder="Password" />
+                    <div *ngIf="registerForm.get('Password')?.errors!=null && registerForm.get('Password')?.touched" class="alert alert-danger mt-2">
+                      <p *ngIf="registerForm.get('Password')?.errors?.required">password is required</p>
+                      <p *ngIf="registerForm.get('Password')?.errors?.pattern">password must start with uppercase and minlength 3 chars and max is 8 chars </p>
+                     
+              
+                  </div>
                   </div>
                 </div>
 
-                <div class=" col-md-6 mb-4 pb-2">
-                  <div class="form-outline">
-                    <input type="tel" id="renter-Password" class="form-control form-control-lg"
-                      placeholder="Renter Password" />
-                  </div>
-                </div>
 
                 <div class="col-xl-12 col-lg-12 col-md-6 mb-4 pb-2">
                   <div class="form-outline">
-                    <input type="tel" id="phoneNumber" class="form-control form-control-lg"
+                    <input formControlName='Phone'  type="tel" id="phoneNumber" class="form-control form-control-lg"
                       placeholder="Phone Number" />
+                      <div *ngIf="registerForm.get('Phone')?.errors!=null && registerForm.get('Phone')?.touched" class="alert alert-danger mt-2">
+                        <p *ngIf="registerForm.get('Phone')?.errors?.required">Phone is required</p>
+                        <p *ngIf="registerForm.get('Phone')?.errors?.pattern">Phone invalid </p>
+                       
+                
+                    </div>
+
                   </div>
                 </div>
+                
                 <h5 class="pb-3">Location</h5>
-                <div class="form-floating mb-4">
-                  <input type="text" class="form-control" id="Street" placeholder="Street" />
-                  <label for="Street">Street</label>
-                </div>
+                      <div  formGroupName='addressForm'> 
+                      <div class="form-floating mb-4">
+                        <input formControlName='street' type="text" class="form-control" id="Street" placeholder="Street" />
+                        <div *ngIf="registerForm.get('street')?.errors!=null && registerForm.get('street')?.touched" class="alert alert-danger mt-2">
+                          <p *ngIf="registerForm.get('street')?.errors?.required">street is required</p>
+                          <p *ngIf="registerForm.get('street')?.errors?.minlength">street is minLength 10</p>
+                          <p *ngIf="registerForm.get('street')?.errors?.maxlength">street is maxLength 40 </p>
+                      </div>
+                        
+                      </div>
 
-                <div class=" col-md-6 mb-4 pb-2">
-                  <select class="form-select">
-                    <option value="1">State</option>
-                    <option value="2">Option 1</option>
-                    <option value="3">Option 2</option>
-                    <option value="4">Option 3</option>
-                  </select>
-                </div>
 
-                <div class=" col-md-6 mb-4 pb-2">
-                  <select class="form-select">
-                    <option value="1">City</option>
-                    <option value="2">Option 1</option>
-                    <option value="3">Option 2</option>
-                    <option value="4">Option 3</option>
-                  </select>
-                </div>
+
+                      <div class=" col-md-6 mb-4 pb-2">
+                        <label for="Street">City</label>
+                        <select formControlName='city' class="form-select">
+                          <option value="1">Menoufia</option>
+                          <option value="2">Zagazig</option>
+                          <option value="3">Alex</option>
+                          <option value="4">Cairo</option>
+                        </select>
+                        <div *ngIf="registerForm.get('city')?.errors!=null && registerForm.get('city')?.touched" class="alert alert-danger mt-2">
+                          <p *ngIf="registerForm.get('city')?.errors?.required">city is required</p></div>
+                      </div>
+                    </div>
               </div>
 
 
               <div class="mt-4 pt-2">
-                <input class="btn btn-primary btn-lg" routerLink='/explore-products' type="submit" value="Submit" />
+                <button class="btn btn-primary btn-lg"  type="submit" >Submit</button>
               </div>
 
             </form>
