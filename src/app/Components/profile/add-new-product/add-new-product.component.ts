@@ -23,7 +23,7 @@ export class AddNewProductComponent implements OnInit {
     )
   }
   async AddProduct(title:any,desc:any,price:any,cat_title:any,files:any){
-    let emailuser = "lala@yahoo.com";//by useing session
+    let emailuser:any = localStorage.getItem('email');//by useing session
     this.formData.append('photo',files[0]); 
     this.formData.append('title',title); 
     this.formData.append('image',files[0].name); 

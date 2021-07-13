@@ -23,10 +23,16 @@ export class SignInComponent implements OnInit {
   submitLoginForm(loginForm:FormGroup){
     this._AuthService.login(loginForm.value).subscribe((response)=>{
       if(response.message == "success"){
-        console.log(loginForm.value);
-        
+        localStorage.setItem('email',response.data.Email)
+        localStorage.setItem('password',response.data.Password)
+        localStorage.setItem('phone',response.data.Phone)
+        localStorage.setItem('name',response.data.Name)
+        localStorage.setItem('img',response.data.image)
+        localStorage.setItem('street',response.data.Address.street)
+        localStorage.setItem('city',response.data.Address.city)
+        localStorage.setItem('Role_name',response.data.Role_name)
         localStorage.setItem('userToken',response.token);
-        console.log("fjsdcndsckl,mvc");
+        console.log(response.data);
         
         this._AuthService.saveCurrentUser();
         this._Router.navigate(['/home' ]) 

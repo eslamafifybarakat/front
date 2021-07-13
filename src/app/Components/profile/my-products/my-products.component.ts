@@ -8,7 +8,7 @@ import { ProductService } from 'src/app/Services/product.service';
   styleUrls: ['./my-products.component.scss']
 })
 export class MyProductsComponent implements OnInit {
-  
+  name:any= localStorage.getItem('name');
   constructor(private myProductService:ProductService, private router: Router) { 
   }
   product:any;
@@ -16,7 +16,7 @@ export class MyProductsComponent implements OnInit {
     this.getProductOfUser()
   }
   getProductOfUser(){
-    this.myProductService.SearchBUserEmail('lala@yahoo.com').subscribe(
+    this.myProductService.SearchBUserEmail(localStorage.getItem('email')).subscribe(
       (res:any)=>{this.product=res},
       (err)=>{console.log(err)},
     );

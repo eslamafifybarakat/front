@@ -18,14 +18,13 @@ export class AuthService {
       this.saveCurrentUser();
 
     }
-    
-
   }
 
   saveCurrentUser()
   {
     let token:any=localStorage.getItem('userToken');
     this.currentUser.next(jwtDecode(token));
+    localStorage.setItem('user',JSON.stringify(this.currentUser));
     console.log(this.currentUser);
   } 
 
@@ -38,7 +37,7 @@ export class AuthService {
   }
   logout(){
     this.currentUser.next(null);
-    localStorage.removeItem('userToken');
+    localStorage.clear()
     this._Router.navigate(['./sign-in']);
 
   }

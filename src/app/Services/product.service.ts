@@ -23,7 +23,7 @@ export class ProductService {
   getUserFproduct(){
     return this.httpclient.get('http://localhost:3333/api/product/get-user-from-productcollection');
   }
-  SearchBCategoryTitle(title:any){
+  SearchBCategoryTitle(title:string){
     return this.httpclient.get(`http://localhost:3333/api/product/search-by-category-title/${title}`);
   }
   SearchBUserEmail(email:any){
