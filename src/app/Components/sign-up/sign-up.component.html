@@ -64,30 +64,28 @@
 
                   </div>
                 </div>
-                
-                <h5 class="pb-3">Location</h5>
-                      <div  formGroupName='addressForm'> 
-                      <div class="form-floating mb-4">
-                        <input formControlName='street' type="text" class="form-control" id="Street" placeholder="Street" />
-                        <div *ngIf="registerForm.get('street')?.errors!=null && registerForm.get('street')?.touched" class="alert alert-danger mt-2">
-                          <p *ngIf="registerForm.get('street')?.errors?.required">street is required</p>
-                          <p *ngIf="registerForm.get('street')?.errors?.minlength">street is minLength 10</p>
-                          <p *ngIf="registerForm.get('street')?.errors?.maxlength">street is maxLength 40 </p>
-                      </div>
-                        
-                      </div>
-                      <div class=" col-md-6 mb-4 pb-2">
-                        <label for="Street">City</label>
-                        <select formControlName='city' class="form-select form-control">
-                          <option value="1">Menoufia</option>
-                          <option value="2">Zagazig</option>
-                          <option value="3">Alex</option>
-                          <option value="4">Cairo</option>
-                        </select>
-                        <div *ngIf="registerForm.get('city')?.errors!=null && registerForm.get('city')?.touched" class="alert alert-danger mt-2">
-                          <p *ngIf="registerForm.get('city')?.errors?.required">city is required</p></div>
-                      </div>
+                <div class="form-floating mb-4">
+                  <label for="Address_street">Address_street</label>
+                    <input formControlName='Address_street' type="text" name="Address_street" class="form-control" id="Address_street" style="margin-top: 50px;" />
+                    <div *ngIf="registerForm.get('Address_street')?.errors!=null && registerForm.get('Address_street')?.touched" class="alert alert-danger mt-2">
+                      <p *ngIf="registerForm.get('Address_street')?.errors?.required">Address_street is required</p>
+                      <p *ngIf="registerForm.get('Address_street')?.errors?.minlength">Address_street is minLength 10</p>
+                      <p *ngIf="registerForm.get('Address_street')?.errors?.maxlength">Address_street is maxLength 40 </p>
+                </div>
+                  
+                </div>
+                <div class=" col-md-6 mb-4 pb-2">
+                      <label for="Address_city">Address_city</label>
+                      <select formControlName='Address_city' class="form-select form-control" id="Address_city">
+                        <option value="Menoufia">Menoufia</option>
+                        <option value="Zagazig">Zagazig</option>
+                        <option value="Alex">Alex</option>
+                        <option value="Cairo">Cairo</option>
+                      </select>
+                      <div *ngIf="registerForm.get('Address_city')?.errors!=null && registerForm.get('Address_city')?.touched" class="alert alert-danger mt-2">
+                        <p *ngIf="registerForm.get('Address_city')?.errors?.required">Address_city is required</p></div>
                     </div>
+                    
               </div>
               <div class="mt-4 pt-2">
                 <button class="btn btn-primary btn-lg"  type="submit" >Submit</button>

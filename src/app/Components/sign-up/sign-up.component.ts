@@ -19,11 +19,9 @@ export class SignUpComponent implements OnInit {
       Email:new FormControl(null,[Validators.required,Validators.email]),
       Password:new FormControl(null,[Validators.required ,Validators.pattern('^[A-Z][a-z0-9]{3,8}$')]),
       Phone:new FormControl(null,[Validators.required ,Validators.pattern('^[0-9]{11}$')]),
-      addressForm: new FormGroup({
-        street:new FormControl(null,[Validators.required,Validators.minLength(10), Validators.maxLength(40)]),
-        city:new FormControl(null,[Validators.required,Validators.minLength(3), Validators.maxLength(12)])
-       
-      })
+      Address_street:new FormControl(null,[Validators.required,Validators.minLength(10), Validators.maxLength(40)]),
+      Address_city:new FormControl(null,[Validators.required,Validators.minLength(3), Validators.maxLength(12)])
+
     });
 submitRegisterForm(registerForm:FormGroup){
     console.log(registerForm.value)

@@ -27,9 +27,9 @@ export class SignInComponent implements OnInit {
         localStorage.setItem('password',response.data.Password)
         localStorage.setItem('phone',response.data.Phone)
         localStorage.setItem('name',response.data.Name)
-        localStorage.setItem('img',response.data.image)
-        localStorage.setItem('street',response.data.Address.street)
-        localStorage.setItem('city',response.data.Address.city)
+        // localStorage.setItem('img',response.data.image)
+        // localStorage.setItem('street',response.data.Address.street)
+        // localStorage.setItem('city',response.data.Address.city)
         localStorage.setItem('Role_name',response.data.Role_name)
         localStorage.setItem('userToken',response.token);
         console.log(response);
