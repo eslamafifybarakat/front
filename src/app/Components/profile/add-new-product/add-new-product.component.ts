@@ -31,6 +31,7 @@ export class AddNewProductComponent implements OnInit {
     this.formData.append('price_by_day',price); 
     let data = await this.myproductservice.AddProduct(this.formData,cat_title,emailuser).subscribe((res)=>{console.log(res)},(err)=>{console.log(err)})
     window.location.href= '/profile/profile/myProducts';
+    // this.router.navigateByUrl('/profile/profile/myProducts')
 
   }
 

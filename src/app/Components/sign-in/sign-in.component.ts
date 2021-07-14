@@ -32,7 +32,7 @@ export class SignInComponent implements OnInit {
         localStorage.setItem('city',response.data.Address.city)
         localStorage.setItem('Role_name',response.data.Role_name)
         localStorage.setItem('userToken',response.token);
-        console.log(response.data);
+        console.log(response);
         
         this._AuthService.saveCurrentUser();
         this._Router.navigate(['/home' ]) 

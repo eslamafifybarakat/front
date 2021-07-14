@@ -10,10 +10,11 @@ import { ProductService } from 'src/app/Services/product.service';
 export class MyProductsComponent implements OnInit {
   name:any= localStorage.getItem('name');
   constructor(private myProductService:ProductService, private router: Router) { 
+    this.getProductOfUser()
   }
   product:any;
   ngOnInit(): void {
-    this.getProductOfUser()
+    // this.getProductOfUser()
   }
   getProductOfUser(){
     this.myProductService.SearchBUserEmail(localStorage.getItem('email')).subscribe(
@@ -23,10 +24,17 @@ export class MyProductsComponent implements OnInit {
   }
  async DeleteProduct(id:any){
   let data =  await this.myProductService.DeleteProduct(id).subscribe(
-    (res:any)=>{console.log(res)
+
+    (res:any)=>{
+      console.log(res);
+      this.getProductOfUser()
+
     },
     (err)=>{console.log(err)},
+    
   );
-  this.router.navigateByUrl('/profile/profile/addNewProduct')
+
+
+  // this.router.navigateByUrl('/profile/profile/addNewProduct')
 }
 }
