@@ -24,7 +24,6 @@ export class AuthService {
   {
     let token:any=localStorage.getItem('userToken');
     this.currentUser.next(jwtDecode(token));
-    // localStorage.setItem('user',JSON.stringify(this.currentUser));
     console.log(this.currentUser);
   } 
 

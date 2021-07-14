@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import {ReactiveFormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
@@ -17,6 +17,7 @@ import { OurTeamComponent } from './Components/landing-page/our-team/our-team.co
 import { SignInComponent } from './Components/sign-in/sign-in.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { ExploreProductsComponent } from './Components/explore-products/explore-products.component';
+import { RentalComponent } from './Components/rent-operation/rental/rental.component';
 
 
 @NgModule({
@@ -35,8 +36,9 @@ import { ExploreProductsComponent } from './Components/explore-products/explore-
     SignInComponent,
     SignUpComponent,
     ExploreProductsComponent,
+    RentalComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule,ReactiveFormsModule, HttpClientModule,],
+  imports: [BrowserModule, AppRoutingModule,ReactiveFormsModule, HttpClientModule,FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

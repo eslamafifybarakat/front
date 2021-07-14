@@ -1,0 +1,25 @@
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 border border rounded p-5">
+          <input class="form-control" type="text" value="{{ product.title }}" readonly><br>
+          <textarea class="border border-dark" rows="6" cols="55" readonly>
+                {{ product.desc }}
+                </textarea>
+          <textarea>
+            </textarea>
+          <input class="form-control" type="text"  value="{{ product.price_by_day }}" readonly><br>
+          <input class="form-control" type="date" value=""><br>
+          <input class="form-control" type="number" [(ngModel)]="num_days" placeholder="Enter Times of days"><br>
+          <input class="form-control" type="text" placeholder="Enter Postion of Receving " value=""><br>
+          <input class="form-control" type="hidden" #seller_id value="{{ product.user }}"><br>
+          <input class="form-control" type="hidden" #buyer_data value="{{ buyer_id }}"><br>
+          <button class="btn btn-success w-25">Rent</button>
+      </div>
+      <div  class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 border border rounded p-5">
+          <img class="w-100 h-50" src="http://localhost:3333/assets/images/products/{{ product.image }}">
+           <h2>Total Payment :  {{ num_days * price_day}}$</h2>
+      </div>
+    </div>
+  </div>
+</section>

@@ -38,7 +38,7 @@
                     <h4>{{ c.title }}</h4>
                   </div>
                   <p>{{ c.desc }}</p>
-                  <a href="#" class="btn card-btn">Rent</a>
+                  <a routerLink='/rental' class="btn card-btn">Rent</a>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@
                   </div>
                   <p>{{ p.desc }}</p>
                   <h1>{{ p.price_by_day }}$</h1>
-                  <a href="#" class="btn card-btn">Rent</a>
+                  <a [routerLink]='["/rental",p._id]' class="btn card-btn">Rent</a>
                 </div>
               </div>
             </div>
@@ -83,7 +83,3 @@
   </section>
 
 </ng-template>
-
-
-
-<!--======================= End Works =========================-->
