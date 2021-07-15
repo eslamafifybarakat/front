@@ -16,15 +16,31 @@ export class ExploreProductsComponent implements OnInit {
     this.getproduct()
   }
   async getproduct(){
+    let x:any;
     await this.myproduct.getCategoryFproduct().subscribe(res=>{
-      this.product=res;
+     x = res;
+     this.product = [];
+      console.log(x);
+      for (const pro of x) {
+          if(pro.status=="available" && pro.status_adminstaration=="accepted"){
+            this.product.push(pro);
+          }
+      }
     },err=>{console.log(err)})
   }
   async getCat(data:string){
     await this.myproduct.SearchBCategoryTitle(data).subscribe(res=>{
-      this.category=res;
-      this.flag=false
-      console.log(res)
+      let x:any;
+      x = res;
+      this.category = [];
+      this.flag;
+       console.log(x);
+       for (const cat of x) {
+           if(cat.status=="available" && cat.status_adminstaration=="accepted"){
+             this.category.push(cat);
+             this.flag=false
+           }
+       }
     },err=>{console.log(err)})
   }
 }

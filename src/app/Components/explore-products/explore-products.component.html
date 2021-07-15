@@ -38,7 +38,7 @@
                     <h4>{{ c.title }}</h4>
                   </div>
                   <p>{{ c.desc }}</p>
-                  <a routerLink='/rental' class="btn card-btn">Rent</a>
+                  <a [routerLink]='["/rental",c._id]' class="btn card-btn">Rent</a>
                 </div>
               </div>
             </div>
