@@ -8,6 +8,8 @@ import { AddNewProductComponent } from './add-new-product/add-new-product.compon
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { MyNotificationComponent } from './my-notification/my-notification.component';
+import { SellerNotifyComponent } from './seller-notify/seller-notify.component';
+import { BuyerNotifyComponent } from './buyer-notify/buyer-notify.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { MyNotificationComponent } from './my-notification/my-notification.compo
     AddNewProductComponent,
     EditProfileComponent,
     EditProductComponent,
-    MyNotificationComponent
+    MyNotificationComponent,
+    SellerNotifyComponent,
+    BuyerNotifyComponent
   ],
   imports: [
     CommonModule,

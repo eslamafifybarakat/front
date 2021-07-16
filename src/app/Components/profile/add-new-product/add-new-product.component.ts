@@ -18,7 +18,8 @@ export class AddNewProductComponent implements OnInit {
   }
   async getCategory(){
     return await this.myservice.getAllCategory().subscribe(
-      (res)=>{this.category=res},
+      (res)=>{
+        this.category=res},
       (err)=>{console.log(err)},
     )
   }

@@ -38,6 +38,8 @@ export class AuthService {
     this.currentUser.next(null);
     localStorage.clear()
     this._Router.navigate(['./sign-in']);
-
+  }
+  updateUser(id:any,data:any){
+    return this._HttpClient.put(`http://localhost:3333/api/user/update-user/${id}`,data);
   }
 }

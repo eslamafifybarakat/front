@@ -9,11 +9,7 @@
                 <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="profile"
                   class="img-lg rounded-circle mb-3" onclick="document.getElementById('fileInput').click();" />
                 <div class="mb-3">
-                  <div class="custom-file mt-3 mb-3">
-                    <input id="fileInput" type="file" class="fileInput" />
-                    <input type="button" class="btn btn-primary btn-block mx-auto w-50 d-flex justify-content-center"
-                      value="UPDATE IMAGE" />
-                  </div>
+                 
                   <h3>User Name :
                     {{ name  }}
                   </h3>
@@ -24,7 +20,7 @@
                     </h5>
                   </div>
                   <div class="text-center mt-4 mt-md-0 w-100 pt-5">
-                    <button class="btn btn-outline-primary w-50 " routerLink='editProfile'>Edit Profile</button>
+                    <button class="btn btn-outline-primary w-50 " routerLink='editProfile' routerLink='editProfile'>Edit Profile</button>
                   </div>
                 </div>
               </div>
@@ -39,7 +35,6 @@
                   </span>
                 </p>
               </div>
-              <button class="btn btn-primary btn-block mb-2">Preview</button>
             </div>
             <div class="col-lg-8">
               <!-- nav bar -->
