@@ -17,8 +17,10 @@ export class MyProductsComponent implements OnInit {
     // this.getProductOfUser()
   }
   getProductOfUser(){
-    this.myProductService.SearchBUserEmail(localStorage.getItem('email')).subscribe(
-      (res:any)=>{this.product=res},
+    this.myProductService.SearchBUserId(localStorage.getItem('id')).subscribe(
+      (res:any)=>{this.product=res
+      console.log(res)
+      },
       (err)=>{console.log(err)},
     );
   }
