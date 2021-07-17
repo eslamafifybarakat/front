@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/Services/auth.service';
 import * as bcrypt from 'bcryptjs';
 import { Router } from '@angular/router';
+import { FormGroup,FormControl,Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-profile',
@@ -22,6 +23,17 @@ export class EditProfileComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {}
+
+//Validation 
+EditProfileForm = new FormGroup({
+  Name:new FormControl(null,[Validators.required,Validators.minLength(5), Validators.maxLength(20)]),
+  Email:new FormControl(null,[Validators.required,Validators.email]),
+  Password:new FormControl(null,[Validators.required ,Validators.pattern('^[A-Z][a-z0-9]{3,8}$')]),
+  Phone:new FormControl(null,[Validators.required ,Validators.pattern('^[0-9]{11}$')]),
+  Address_street:new FormControl(null,[Validators.required,Validators.minLength(10), Validators.maxLength(40)]),
+  Address_city:new FormControl(null,[Validators.required,Validators.minLength(3), Validators.maxLength(12)])
+
+});
 
   editprofile(
     name: any,

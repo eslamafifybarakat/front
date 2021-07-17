@@ -10,6 +10,7 @@ import { EditProductComponent } from './edit-product/edit-product.component';
 import { MyNotificationComponent } from './my-notification/my-notification.component';
 import { SellerNotifyComponent } from './seller-notify/seller-notify.component';
 import { BuyerNotifyComponent } from './buyer-notify/buyer-notify.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +26,10 @@ import { BuyerNotifyComponent } from './buyer-notify/buyer-notify.component';
   ],
   imports: [
     CommonModule,
-    ProfileRoutingModule
+    ProfileRoutingModule,
+   
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ProfileModule { }
