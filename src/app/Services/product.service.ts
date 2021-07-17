@@ -26,8 +26,8 @@ export class ProductService {
   SearchBCategoryTitle(title:string){
     return this.httpclient.get(`http://localhost:3333/api/product/search-by-category-title/${title}`);
   }
-  SearchBUserId(id:any){
-    return this.httpclient.get(`http://localhost:3333/api/product/search-by-user-id/${id}`);
+  SearchBUserEmail(email:any){
+    return this.httpclient.get(`http://localhost:3333/api/product/search-by-user-email/${email}`);
   }
   getProduct(id:any){
     return this.httpclient.get(`http://localhost:3333/api/product/get-product/${id}`)
