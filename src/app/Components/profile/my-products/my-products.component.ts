@@ -17,7 +17,7 @@ export class MyProductsComponent implements OnInit {
     // this.getProductOfUser()
   }
   getProductOfUser(){
-    this.myProductService.SearchBUserId(localStorage.getItem('id')).subscribe(
+    this.myProductService.SearchBUserEmail(localStorage.getItem('email')).subscribe(
       (res:any)=>{this.product=res
       console.log(res)
       },
