@@ -42,4 +42,12 @@ export class AuthService {
   updateUser(id:any,data:any){
     return this._HttpClient.put(`http://localhost:3333/api/user/update-user/${id}`,data);
   }
+  deleteUser(id: any) {
+    return this._HttpClient.delete(
+      `http://localhost:3333/api/user/delete-user/${id}`
+    );
+  }
+  getUserById(id: any) {
+    return this._HttpClient.get(`http://localhost:3333/api/user/get-user/${id}`);
+  }
 }

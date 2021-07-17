@@ -15,7 +15,7 @@ export class SignUpComponent implements OnInit {
   constructor(private _AuthService:AuthService,private _Router:Router) { }
 
   registerForm = new FormGroup({
-      Name:new FormControl(null,[Validators.required,Validators.minLength(3), Validators.maxLength(10)]),
+      Name:new FormControl(null,[Validators.required,Validators.minLength(5), Validators.maxLength(20)]),
       Email:new FormControl(null,[Validators.required,Validators.email]),
       Password:new FormControl(null,[Validators.required ,Validators.pattern('^[A-Z][a-z0-9]{3,8}$')]),
       Phone:new FormControl(null,[Validators.required ,Validators.pattern('^[0-9]{11}$')]),

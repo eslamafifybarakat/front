@@ -31,17 +31,18 @@
                   <div class="form-group mb-3 col-xs-12 col-sm-6 w-100">
                     <label for="price-per-day">Price Per Day
                     </label>
-                    <input id="price-per-day" name="price-per-day" #price type="number" class="form-control validate" />
+                    <input id="price-per-day" name="price-per-day" #price type="number" class="form-control validate mt-2" />
                   </div>
                 </div>
               </div>
+              <br>
               <div class="col-xl-12 col-lg-12 col-md-12">
                 <input type="file" #img class="form-control">
               </div>
-              <br>
             </div>
+            <br>
             <div class="col-xl-12 col-lg-12 col-md-12">
-              <button type="button" (click)="AddProduct(title.value,desc.value,price.value,cat_select.options[cat_select.selectedIndex].text,img.files)" class="btn btn-primary btn-block text-uppercase w-100">Add Product Now</button>
+              <button type="button" (click)="AddProduct(title.value,desc.value,price.value,cat_select.options[cat_select.selectedIndex].text,img.files)" class="btn btn-primary btn-block text-uppercase w-50 text-center" style="margin: auto 200px">Add Product Now</button>
             </div>
 
           </form>
