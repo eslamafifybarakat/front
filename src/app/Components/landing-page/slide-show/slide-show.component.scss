@@ -1,9 +1,6 @@
 
-
-
-
 .imgSlid {
-  background-image: url("/assets/images/slideshow-1.jpg");
+  background-image: url("/assets/images/Eslam/download (9).webp");
   background-position: center center;
   background-size: cover;
 
@@ -11,17 +8,21 @@
 }
 
 .imgSlid2 {
-  background-image: url("/assets/images/slideshow-2.jpg");
+  background-image: url("/assets/images/Eslam/download (5).webp");
   background-position: center center;
   background-size: cover;
-
 }
 
 .imgSlid3 {
-  background-image: url("/assets/images/slideshow-3.jpg");
+  background-image: url("/assets/images/Eslam/cutter.jpg");
   background-position: center center;
   background-size: cover;
+}
 
+.imgSlid4 {
+  background-image: url("/assets/images/Eslam/download (11).webp");
+  background-position: center center;
+  background-size: cover;
 }
 
 h1 {
@@ -31,9 +32,15 @@ h1 {
   font-size: 70px;
 }
 
-.carousel-control-prev,
+.carousel-control-prev
+ {
+  padding: 5px;
+  width: 80px;
+  height: 50px;
+  position: relative;
+}
+
 .carousel-control-next {
-  border: 1px solid #fff;
   padding: 5px;
   width: 80px;
   height: 50px;
@@ -48,7 +55,6 @@ h1 {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #f25454;
   content: "";
   transition: .5s;
   z-index: -1;
