@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" style="height: 52px;">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -6,7 +6,7 @@
     </button>
     <div class="text-white text-center">
       <img src="https://i.ibb.co/QDy827D/ak-logo.png"
-      style="width:60px; height:40px;"
+      style="width:60px; height:70%;"
       alt="logo">
       <h5>
         Renterific
@@ -18,7 +18,7 @@
         <li class="nav-item ">
           <a *ngIf='isLogin'
           routerLink='/home'
-          class="nav-link  text-white">
+          class="nav-link  text-white ccc">
           <i class="bi bi-house mx-2"></i>
           Home
           </a>
@@ -26,7 +26,7 @@
         <li class="nav-item">
           <a *ngIf='isLogin'
           routerLink='profile'
-          class="nav-link text-white">
+          class="nav-link text-white ccc">
             <i class="far fa-user-circle mx-2"></i>
             Profile
           </a>
@@ -34,7 +34,7 @@
         <li class="nav-item">
           <a *ngIf='isLogin'
           routerLink='explore-products'
-          class="nav-link text-white">
+          class="nav-link text-white ccc">
             <i class="fad fa-layer-group mx-2"></i>
             Products
           </a>
@@ -44,7 +44,7 @@
         <li class="nav-item ml-2">
           <a *ngIf='!isLogin'
           type="button"
-          class="btn btn-outline-none text-white"
+          class="btn btn-outline-none text-white ccc"
           routerLink='/sign-in'
           >
           <i class="far fa-american-sign-language-interpreting mx-2"></i>
@@ -56,7 +56,7 @@
         <li class="nav-item mx-2">
           <a *ngIf='!isLogin'
           type="button"
-          class="btn btn-outline-none text-info"
+          class="btn btn-outline-none text-info ccc"
           routerLink='/sign-up'
           >
           <i class="fal fa-user-plus"></i>
@@ -70,7 +70,7 @@
         <li class="nav-item">
           <a *ngIf='isLogin'
           type="button"
-          class="btn btn-outline-none text-warning"
+          class="btn btn-outline-none text-warning "
           (click)='isLogOut()'>
           Sign Out
         </a>
