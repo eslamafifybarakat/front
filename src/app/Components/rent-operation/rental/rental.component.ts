@@ -44,7 +44,7 @@ operation:number=0;
     }
     await this.myproduct.UpdateProduct(product_id,{"status":"unavailable"}).subscribe(res=>{console.log(res)},err=>{console.log(err)})
     await this.myrenting.AddRenting(data).subscribe(res=>{console.log(res)},err=>{console.log(err)})
-    return this.mynavigate.navigateByUrl('/home');
+    return this.mynavigate.navigateByUrl(`/payment/${oper_Total_Payment}`);
   }
 
 }

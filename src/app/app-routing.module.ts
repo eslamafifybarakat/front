@@ -7,6 +7,7 @@ import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { AuthGuard } from './auth.guard';
 import { RentalComponent } from './Components/rent-operation/rental/rental.component';
 import { SignInComponent } from './Components/sign-in/sign-in.component';
+import { PaymentComponent } from './Components/payment/payment.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'rental/:id', component: RentalComponent },
+  { path: 'payment/:price', component: PaymentComponent },
   { path: 'explore-products',canActivate:[AuthGuard], component: ExploreProductsComponent },
 
   {

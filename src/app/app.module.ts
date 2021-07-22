@@ -18,6 +18,8 @@ import { SignInComponent } from './Components/sign-in/sign-in.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { ExploreProductsComponent } from './Components/explore-products/explore-products.component';
 import { RentalComponent } from './Components/rent-operation/rental/rental.component';
+import { PaymentComponent } from './Components/payment/payment.component';
+import { StripeModule } from "stripe-angular";
 
 
 @NgModule({
@@ -37,8 +39,9 @@ import { RentalComponent } from './Components/rent-operation/rental/rental.compo
     SignUpComponent,
     ExploreProductsComponent,
     RentalComponent,
+    PaymentComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule,ReactiveFormsModule, HttpClientModule,FormsModule],
+  imports: [BrowserModule, AppRoutingModule,ReactiveFormsModule, HttpClientModule,FormsModule,StripeModule.forRoot("pk_test_51JEgToCAlmE8w7N1BhcxIjbQkLH7qOx1sk5GZpzbB6QzQLtMBCDdZcP2JlQzRCgpeOW8Kk0jNkyjEKmVyx21QOYE00uYP8trKO") ],
   providers: [],
   bootstrap: [AppComponent],
 })
