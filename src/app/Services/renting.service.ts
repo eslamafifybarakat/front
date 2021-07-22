@@ -14,4 +14,7 @@ export class RentingService {
    GetAllRental(){
      return this.myhttpclient.get('http://localhost:3333/api/renting-operation/all-renting');
    }
+   PaymentOperation(data:any){
+    return this.myhttpclient.post('http://localhost:3333/payment',data);
+   }
 }

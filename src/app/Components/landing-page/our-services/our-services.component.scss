@@ -1,5 +1,3 @@
-
-
 // sections
 .container .row h2 {
   font-size: 70px;
@@ -211,42 +209,7 @@
    transition: all 0.8s ease;
    background-position: 0px;
    background-size: 200px;
-=======
-// #services {
-//   width: 100%;
-//   background: #fafafa;
-// }
-
-// .parent-service {
-//   padding-left: 60px;
-// }
-
-// .iconf {
-//   color: #121c82;
-//   position: relative;
-//   left: 0;
-//   top: 0;
-// }
-
-// #services h4 {
-//   margin-bottom: 10px;
-//   font-size: 18px;
-//   line-height: 32px;
-//   font-weight: 600;
-//   transition: .3s;
-// }
-
-// .serDecr {
-//   color: #666;
-//   margin: 0 0 20px;
-//   font-family: "Open Sans", sans-serif;
-//   font-size: 14px;
-//   line-height: 1.75rem;
-// }
-
-// .descriptionS:hover {
-//   color: #aeaffa;
-// }
+}
 
 .about {
   $cubic: cubic-bezier(0.64, 0.01, 0.07, 1.65);
@@ -514,7 +477,6 @@
    background-position: -120px;
    transition: all 0.3s ease;
 }
-
 .card:hover .icon i {
    background: linear-gradient(90deg, #FF7E7E, #FF4848);
    background-clip: text;
@@ -523,17 +485,16 @@
    transition: all 0.3s ease;
 }
 
-=======
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  margin-top: 30px;
-  color: white;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 4px;
+.card:hover .icon i{
+   width: 100%;
+   margin: 0;
+   text-align: center;
+   margin-top: 30px;
+   color: white;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 4px;
 }
-
 .card .text {
   width: 80%;
   margin: 0 auto;
