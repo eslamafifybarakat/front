@@ -32,7 +32,6 @@ export class AddNewProductComponent implements OnInit {
     Price:new FormControl(null,[Validators.required ,Validators.min(5),Validators.max(500)]),
     Address_street:new FormControl(null,[Validators.required,Validators.minLength(10), Validators.maxLength(40)]),
     Img:new FormControl(null,[Validators.required])
-
   });
 
 
